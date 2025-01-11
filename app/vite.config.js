@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '/movieComparison/',
+    build: { outDir: './dist/' },
+    base: '/compareMovies/',
 });
