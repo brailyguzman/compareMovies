@@ -1,13 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <h1>2023's Top Domestic Movies</h1>
+            </header>
+            <main>
+                <section id="movies-section">
+                    <h2 class="section-title">Movies</h2>
+
+                    <form id="add-movie-form">
+                        <h2 id="add-movie-form-title">Add Your Movie</h2>
+
+                        <label for="movie-title-input"
+                            >Movie Title:
+                            <input
+                                type="text"
+                                name="movieTitle"
+                                id="movie-title-input"
+                                required
+                            />
+                        </label>
+
+                        <label for="movie-critic-input"
+                            >Critic Score:
+                            <input
+                                type="number"
+                                name="criticScore"
+                                id="movie-critic-input"
+                                class="score-input"
+                                min="0"
+                                max="100"
+                                required
+                            />
+
+                            %
+                        </label>
+
+                        <label for="movie-audience-input"
+                            >Audience Score:
+                            <input
+                                type="number"
+                                name="audienceScore"
+                                id="movie-audience-input"
+                                class="score-input"
+                                min="0"
+                                max="100"
+                                required
+                            />
+                            %
+                        </label>
+
+                        <label for="movie-domestic-input"
+                            >Domestic Gross Sales:
+
+                            <input
+                                type="number"
+                                name="domesticGross"
+                                id="movie-domestic-input"
+                                required
+                            />
+                        </label>
+
+                        <label for="movie-genre-input"
+                            >Genre:
+                            <select
+                                name="genre"
+                                id="movie-genre-input"
+                                required
+                            >
+                                <option value="" disabled selected>
+                                    Select a genre
+                                </option>
+                                <option value="action">Action</option>
+                                <option value="action">Adventure</option>
+                                <option value="action">Comedy</option>
+                                <option value="action">Drama</option>
+                                <option value="action">Horror</option>
+                                <option value="action">Concert</option>
+                                <option value="action">Documentary</option>
+                                <option value="action">Musical</option>
+                                <option value="action">Romance</option>
+                                <option value="action">Sci-Fi</option>
+                                <option value="action">Thriller</option>
+                            </select>
+                        </label>
+
+                        <button id="form-add-movie">Add Movie</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
 </html>
