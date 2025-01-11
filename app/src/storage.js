@@ -1,5 +1,5 @@
 import initialMovies from './movie-data.json';
-import { storageKey } from './constants.js';
+import { storageKey } from './utils.js';
 
 export const setMovies = (value) => {
     localStorage.setItem(storageKey, JSON.stringify(value));

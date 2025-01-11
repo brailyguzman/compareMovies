@@ -1,4 +1,4 @@
-import { formatCurrency } from './constants.js';
+import { formatCurrency } from './utils.js';
 
 export const renderMovie = (movie, custom) => {
     const { criticScore, audienceScore, domestic, genre, title } = movie;
