@@ -1,11 +1,12 @@
 import { formatCurrency } from './utils.js';
 
-export const renderMovie = (movie, custom) => {
+export const renderMovie = (movie, index, custom) => {
     const { criticScore, audienceScore, domestic, genre, title } = movie;
 
     const moviesUl = document.getElementById('movies-list');
 
     const movieLi = document.createElement('li');
+    movieLi.tabIndex = index;
 
     movieLi.classList.add('movie');
 

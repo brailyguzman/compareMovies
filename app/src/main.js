@@ -4,6 +4,7 @@ import './events.js';
 import './style.css';
 
 const movies = initializeMovies();
-for (const movie of movies) {
-    renderMovie(movie);
-}
+
+movies.forEach((movie, index) => {
+    renderMovie(movie, index);
+});

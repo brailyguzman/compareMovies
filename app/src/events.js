@@ -1,3 +1,4 @@
+import { renderMovie } from './render.js';
 import { resetMovies, updateMovies } from './storage.js';
 
 document
@@ -18,7 +19,10 @@ document.getElementById('add-movie-form').addEventListener('submit', (e) => {
     const data = Object.fromEntries(new FormData(e.target));
     data.custom = true;
 
-    renderMovie(data, true);
+    const index = document.querySelectorAll('.movie').length;
+
+    // Index starts at 0 so the current length should give us the correct index for this movie render.
+    renderMovie(data, index, true);
     updateMovies(data);
 
     e.target.reset();
