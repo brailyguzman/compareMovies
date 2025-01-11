@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/movie-comparison/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+      <script type="module" crossorigin src="/movie-comparison/assets/index-DrjYo_EW.js"></script>
+      <link rel="stylesheet" crossorigin href="/movie-comparison/assets/index-DuGzhZ1B.css">
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <h1>2023's Top Domestic Movies</h1>
+            </header>
+            <main>
+                <section id="movies-section" aria-label="Movies Section">
+                    <h2 class="section-title">Movies</h2>
+                    <div class="movies-section-container">
+                        <form
+                            id="add-movie-form"
+                            aria-label="Add Your Movie Form"
+                        >
+                            <h2 id="add-movie-form-title">Add Your Movie</h2>
+
+                            <label for="movie-title-input"
+                                >Movie Title:
+                                <input
+                                    type="text"
+                                    name="title"
+                                    id="movie-title-input"
+                                    required
+                                />
+                            </label>
+
+                            <label for="movie-critic-input"
+                                >Critic Score:
+                                <input
+                                    type="number"
+                                    name="criticScore"
+                                    id="movie-critic-input"
+                                    class="score-input"
+                                    min="0"
+                                    max="100"
+                                    required
+                                />
+
+                                %
+                            </label>
+
+                            <label for="movie-audience-input"
+                                >Audience Score:
+                                <input
+                                    type="number"
+                                    name="audienceScore"
+                                    id="movie-audience-input"
+                                    class="score-input"
+                                    min="0"
+                                    max="100"
+                                    required
+                                />
+                                %
+                            </label>
+
+                            <label for="movie-domestic-input"
+                                >Domestic Gross Sales:
+
+                                <input
+                                    type="number"
+                                    name="domestic"
+                                    id="movie-domestic-input"
+                                    required
+                                />
+                            </label>
+
+                            <label for="movie-genre-input"
+                                >Genre:
+                                <select
+                                    name="genre"
+                                    id="movie-genre-input"
+                                    required
+                                >
+                                    <option value="" disabled selected>
+                                        Select a genre
+                                    </option>
+                                    <option value="action">Action</option>
+                                    <option value="action">Adventure</option>
+                                    <option value="action">Comedy</option>
+                                    <option value="action">Drama</option>
+                                    <option value="action">Horror</option>
+                                    <option value="action">Concert</option>
+                                    <option value="action">Documentary</option>
+                                    <option value="action">Musical</option>
+                                    <option value="action">Romance</option>
+                                    <option value="action">Sci-Fi</option>
+                                    <option value="action">Thriller</option>
+                                </select>
+                            </label>
+
+                            <button id="form-add-movie">Add Movie</button>
+                        </form>
+
+                        <div id="movies-container">
+                            <ul id="movies-list"></ul>
+
+                            <button id="movies-default-button">
+                                Go Back To Default Movies
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="bar-chart-section">
+                    <h2 class="section-title">Domestic Box Office</h2>
+
+                    <div id="bar-chart-section-container"></div>
+                </section>
+
+                <section id="doughnut-chart-section">
+                    <h2 class="section-title">Genres and total gross</h2>
+
+                    <div id="doughnut-chart-section-container"></div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
