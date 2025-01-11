@@ -21,6 +21,10 @@ body {
     color-scheme: dark;
 }
 
+li {
+    list-style: none;
+}
+
 header,
 section {
     padding: var(--gutters);
@@ -49,6 +53,52 @@ section {
 
 #form-add-movie {
     align-self: center;
-    width: 50%;
+    width: 300px;
     font-size: 1.25rem;
+}
+
+/* Movies */
+
+.movies-section-container {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+#movies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#movies-list {
+    display: flex;
+    background-color: var(--secondary-background);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: 2px solid var(--text-color);
+    width: 100%;
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.movie {
+    box-shadow: 0px 0px 15px var(--background-color);
+    padding: 1rem;
+    flex-grow: 1;
+    width: 25%;
+}
+
+.movie-title {
+    margin: 0.5rem 0;
+}
+
+#movies-default-button {
+    align-self: center;
+    width: 50%;
+    padding: 0.5rem;
 }

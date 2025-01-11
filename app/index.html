@@ -14,86 +14,95 @@
             <main>
                 <section id="movies-section">
                     <h2 class="section-title">Movies</h2>
+                    <div class="movies-section-container">
+                        <form id="add-movie-form">
+                            <h2 id="add-movie-form-title">Add Your Movie</h2>
 
-                    <form id="add-movie-form">
-                        <h2 id="add-movie-form-title">Add Your Movie</h2>
+                            <label for="movie-title-input"
+                                >Movie Title:
+                                <input
+                                    type="text"
+                                    name="title"
+                                    id="movie-title-input"
+                                    required
+                                />
+                            </label>
 
-                        <label for="movie-title-input"
-                            >Movie Title:
-                            <input
-                                type="text"
-                                name="movieTitle"
-                                id="movie-title-input"
-                                required
-                            />
-                        </label>
+                            <label for="movie-critic-input"
+                                >Critic Score:
+                                <input
+                                    type="number"
+                                    name="criticScore"
+                                    id="movie-critic-input"
+                                    class="score-input"
+                                    min="0"
+                                    max="100"
+                                    required
+                                />
 
-                        <label for="movie-critic-input"
-                            >Critic Score:
-                            <input
-                                type="number"
-                                name="criticScore"
-                                id="movie-critic-input"
-                                class="score-input"
-                                min="0"
-                                max="100"
-                                required
-                            />
+                                %
+                            </label>
 
-                            %
-                        </label>
+                            <label for="movie-audience-input"
+                                >Audience Score:
+                                <input
+                                    type="number"
+                                    name="audienceScore"
+                                    id="movie-audience-input"
+                                    class="score-input"
+                                    min="0"
+                                    max="100"
+                                    required
+                                />
+                                %
+                            </label>
 
-                        <label for="movie-audience-input"
-                            >Audience Score:
-                            <input
-                                type="number"
-                                name="audienceScore"
-                                id="movie-audience-input"
-                                class="score-input"
-                                min="0"
-                                max="100"
-                                required
-                            />
-                            %
-                        </label>
+                            <label for="movie-domestic-input"
+                                >Domestic Gross Sales:
 
-                        <label for="movie-domestic-input"
-                            >Domestic Gross Sales:
+                                <input
+                                    type="number"
+                                    name="domestic"
+                                    id="movie-domestic-input"
+                                    required
+                                />
+                            </label>
 
-                            <input
-                                type="number"
-                                name="domesticGross"
-                                id="movie-domestic-input"
-                                required
-                            />
-                        </label>
+                            <label for="movie-genre-input"
+                                >Genre:
+                                <select
+                                    name="genre"
+                                    id="movie-genre-input"
+                                    required
+                                >
+                                    <option value="" disabled selected>
+                                        Select a genre
+                                    </option>
+                                    <option value="action">Action</option>
+                                    <option value="action">Adventure</option>
+                                    <option value="action">Comedy</option>
+                                    <option value="action">Drama</option>
+                                    <option value="action">Horror</option>
+                                    <option value="action">Concert</option>
+                                    <option value="action">Documentary</option>
+                                    <option value="action">Musical</option>
+                                    <option value="action">Romance</option>
+                                    <option value="action">Sci-Fi</option>
+                                    <option value="action">Thriller</option>
+                                </select>
+                            </label>
 
-                        <label for="movie-genre-input"
-                            >Genre:
-                            <select
-                                name="genre"
-                                id="movie-genre-input"
-                                required
-                            >
-                                <option value="" disabled selected>
-                                    Select a genre
-                                </option>
-                                <option value="action">Action</option>
-                                <option value="action">Adventure</option>
-                                <option value="action">Comedy</option>
-                                <option value="action">Drama</option>
-                                <option value="action">Horror</option>
-                                <option value="action">Concert</option>
-                                <option value="action">Documentary</option>
-                                <option value="action">Musical</option>
-                                <option value="action">Romance</option>
-                                <option value="action">Sci-Fi</option>
-                                <option value="action">Thriller</option>
-                            </select>
-                        </label>
+                            <button id="form-add-movie">Add Movie</button>
+                        </form>
 
-                        <button id="form-add-movie">Add Movie</button>
-                    </form>
+                        <div id="movies-container">
+                            <ul id="movies-list"></ul>
+
+                            <button id="movies-default-button">
+                                Go Back To Default Movies
+                            </button>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>
