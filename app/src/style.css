@@ -19,6 +19,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     color-scheme: dark;
+    font-size: 1rem;
 }
 
 li {
@@ -33,6 +34,7 @@ section {
 section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--gutters);
 }
 
@@ -101,4 +103,24 @@ section {
     align-self: center;
     width: 50%;
     padding: 0.5rem;
+}
+
+/* Charts */
+#bar-chart-section {
+    background-color: var(--secondary-background);
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 1200px) {
+    .movies-section-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie {
+        width: 100%;
+    }
 }

@@ -1,4 +1,4 @@
-import { renderMovie } from './render.js';
+import { renderCharts, renderMovie } from './render.js';
 import { resetMovies, updateMovies } from './storage.js';
 
 document
@@ -11,6 +11,8 @@ document
         for (const customMovie of customMovies) {
             customMovie.remove();
         }
+
+        renderCharts();
     });
 
 document.getElementById('add-movie-form').addEventListener('submit', (e) => {
@@ -24,10 +26,7 @@ document.getElementById('add-movie-form').addEventListener('submit', (e) => {
     // Index starts at 0 so the current length should give us the correct index for this movie render.
     renderMovie(data, index, true);
     updateMovies(data);
+    renderCharts();
 
     e.target.reset();
 });
-
-document
-    .getElementById('movie-domestic-input')
-    .addEventListener('change', (e) => {});

@@ -1,4 +1,6 @@
+import { getMovies } from './storage.js';
 import { formatCurrency } from './utils.js';
+import Chart from 'chart.js/auto';
 
 export const renderMovie = (movie, index, custom) => {
     const { criticScore, audienceScore, domestic, genre, title } = movie;
@@ -45,4 +47,78 @@ export const renderMovie = (movie, index, custom) => {
     );
 
     moviesUl.appendChild(movieLi);
+};
+
+const renderBarChart = (parentElement, movies) => {
+    parentElement.innerHTML = ``;
+
+    const canvas = document.createElement('canvas');
+    canvas.className = 'chart';
+
+    new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: movies.map((movie) => movie.title),
+            datasets: [
+                {
+                    label: 'Domestic Gross',
+                    data: movies.map((movie) => movie.domestic),
+                },
+            ],
+        },
+    });
+
+    parentElement.append(canvas);
+};
+
+const renderDoughnutChart = (parentElement, movies) => {
+    console.log('trying to render doughnut...');
+    parentElement.innerHTML = ``;
+
+    const canvas = document.createElement('canvas');
+    canvas.className = 'chart';
+
+    const genresFreq = {};
+
+    movies.forEach((movie) => {
+        let genreCount = genresFreq[movie.genre];
+
+        if (!genreCount) {
+            genreCount = 1;
+        } else {
+            genreCount++;
+        }
+
+        genresFreq[movie.genre] = genreCount;
+    });
+
+    const data = {
+        labels: Object.keys(genresFreq),
+        datasets: [
+            {
+                data: Object.keys(genresFreq).map((key) => genresFreq[key]),
+                hoverOffset: 4,
+            },
+        ],
+    };
+
+    new Chart(canvas, {
+        type: 'doughnut',
+        data: data,
+    });
+
+    parentElement.append(canvas);
+};
+
+export const renderCharts = (movies) => {
+    const barChartSection = document.getElementById(
+        'bar-chart-section-container'
+    );
+
+    const doughnutChartSection = document.getElementById(
+        'doughnut-chart-section-container'
+    );
+
+    renderBarChart(barChartSection, movies);
+    renderDoughnutChart(doughnutChartSection, movies);
 };
