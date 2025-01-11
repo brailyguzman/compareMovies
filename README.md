@@ -33,8 +33,8 @@ A user:
 - [x] There is a `button` under the `ul` to reset the movies to the default movies
 - [x] The movies are each in `li` elements inside a `ul` element
 - [x] The movies are displayed in a grid-like pattern (flex or grid)
-- [ ] There is a bar chart using Chart.js
-- [ ] There is a second chart using Chart.js
+- [x] There is a bar chart using Chart.js
+- [x] There is a second chart using Chart.js
 - [ ] There is a third chart using Chart.js
 
 ## layout: Accessibility
@@ -49,16 +49,16 @@ A user:
 - [x] Clicking the form submit button does not reload the page because the default behavior is prevented
 - [x] Clicking the form submit button creates a new movie in the movies section
 - [x] Clicking the form submit button clears the form
-- [ ] When a movie is added, all charts are rerendered to show the new movie
-- [ ] At least one chart has a modified tooltip display
-- [ ] Clicking the reset button removes all user added movies and resets the movies to the default list
-- [ ] The movies are saved to localStorage
-- [ ] The movies are loaded from localStorage on page load
+- [x] When a movie is added, all charts are rerendered to show the new movie
+- [x] At least one chart has a modified tooltip display
+- [x] Clicking the reset button removes all user added movies and resets the movies to the default list
+- [x] The movies are saved to localStorage
+- [x] The movies are loaded from localStorage on page load
 
 ## Meta
 - [x] The project is created using Vite
 - [x] The code exists in more than one JS file
-- [ ] The project is deployed via GitHub Pages properly
+- [x] The project is deployed via GitHub Pages properly
 - [x] The `movie-data.json` file is read properly
 - [x] css flexbox or grid was used
 - [x] The code does not render unescaped text directly to the DOM (`createElement`` or other escape method used)
